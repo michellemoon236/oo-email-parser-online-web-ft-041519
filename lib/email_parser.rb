@@ -9,7 +9,7 @@ class EmailParser
   
   def initialize(list_of_emails)
     if list_of_emails.include?(",")
-      @array = list_of_emails.split(", ").split(" ")
+      @array = list_of_emails.split(/[\s,/)
     else
       @array = list_of_emails.split
     end 
