@@ -8,7 +8,10 @@ class EmailParser
   attr_accessor :list_of_emails
   
   def initialize(list_of_emails)
-    @array = list_of_emails.split.split(", ")
+    if list_of_emails.include?(",")
+      @array = list_of_emails.split(", ")
+    else
+      @array = list_of_emails.split
   end
 
   def parse
