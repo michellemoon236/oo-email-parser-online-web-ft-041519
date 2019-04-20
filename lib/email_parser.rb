@@ -12,7 +12,7 @@ class EmailParser
   end
 
   def parse
-    @array.uniq
+    @array.reject { |i| i.empty?}.uniq
   end
   
 end
